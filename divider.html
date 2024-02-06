@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divider</title>
+  <meta name='author' content='Alexander Kuznecov'>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://kit.fontawesome.com/39bbe9b596.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="main">
+    <div class="main__container container">
+      <div class="main__inner">
+        <div class="main__info">
+          <h1 class="title">Divider</h1>
+        </div>
+        <div class="main__task">
+          <div class="main__task--area">
+            <div class="main__area--enter">
+              <label for="userInput1">Enter number:</label>
+              <input class='peleks' value='12' id='userInput1' type="text">
+              <label for="userInput2">Enter number:</label>
+              <input class='peleks' value='8' id='userInput2' type="text">
+              <button onclick='mainFunction()' id='resultSubmitBtn' type="button">Solve</button>
+            </div>
+            <textarea readonly id="textArea" cols="40" rows="10">>> Valid data: divider equals</textarea>
+          </div>
+        </div>
+      </div>
+      <!--  Paskaidrojumi par to, kā projekts darbojas  -->
+		<details>
+			<summary>Kā tas darbojas?</summary>
+			<!---------------------------------------->
+<div class="box">
+<p class="izmerL">1. Ievads</p>
+<blockquote>Šis projekts tika izveidots ar mērķi ļaut lietotājiem atrast lielāko kopīgo dalītāju. Zemāk redzams galvenais JavaScript kods, kas ieviests šajā projektā</blockquote>
+<!---------------------------------------->
+<p class="izmerL">2. JavaScript kods</p>
+<blockquote>
+Projektā tiek izmantotas divas funkcijas:
+<ol>
+<li>Pārvaldnieka funkcija '<span class="zils">mainFunction()</span>' datu iegūšanai no lietotāja, visu pārējo funkciju izsaukšanai un gala rezultātu izdrukāšanai (šī funkcija tiek aktivizēta, noklikšķinot uz pogas 'Solve');</li>
+<li>funkcija vērtību testēšanai un rezultatu atrisinasanai '<span class="zils">checkFunction(skaitlis1, skaitlis2)</span>', lietotaja ievaditi 2 skaitli, pec kuram ir jaatrast lielako kopigo dalitaju;</li>
+</ol>
+Šī projekta galvenās funkcijas JavaScript kods ir parādīts laukā zemāk:
+</blockquote>
+
+<i class="fa-brands fa-js"></i>
+<pre> 
+while (x2 != 0) {
+  y1 = x2; <span class="peleks">// make new variable for x2 saving</span>
+  x2 = x1 % x2; <span class="peleks">// divide and get remainder</span>
+  x1 = y1; <span class="peleks">// refresh x1 for next work in loop</span>
+}
+<span class="peleks">// kad x2 driz bus 0 tad rezultats bus nosutits no x1 mainigaja</span>
+</pre>
+<blockquote>Noklikšķiniet uz <a target='_blank' href="./images/flowchart.svg">šīs ikonas <i class="fa-solid fa-diagram-project"></i></a>, lai skatītu šī JavaScript koda blokshēmu.</blockquote>
+      </div>
+		</details>
+    </div>
+  </main>
+  <!-- /.main -->
+
+  <footer class="footer">
+    Made by Alexander Kuznecov 2024 &copy;
+  </footer>
+  <!-- /.footer -->
+
+  <!-- script -->
+  <script src="./scripts/divider-script.js"></script>
+</body>
+</html>
